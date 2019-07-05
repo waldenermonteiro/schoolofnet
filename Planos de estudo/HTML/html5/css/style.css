@@ -1,0 +1,17 @@
+header,
+section,
+footer,
+nav,
+main,
+article,
+figure {
+    display: block
+}
+
+myTag {
+    display: block;
+    background-color: #ddd
+}
+main, section, main aside{
+    display: inline-block
+}

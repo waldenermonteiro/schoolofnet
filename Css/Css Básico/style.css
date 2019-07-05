@@ -1,0 +1,27 @@
+body {
+    padding: 10px;
+    font-family: Oswald, Arial;
+    font-size: 3vh;
+    background-color: grey;
+}
+
+.btn {
+    text-decoration: none;
+    background-color: #ecf0f1;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #7f8c8d;
+    display: inline-block;
+}
+
+.box {
+    background: #FFFF;
+    margin: 20px 60px 90px 120px;
+    padding: 20px 60px 90px 120px;
+    border: 3px dashed #000000;
+    border-radius: 10px;
+    position: relative;
+}
+#display {
+    display: inline;
+}
