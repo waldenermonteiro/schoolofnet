@@ -1,0 +1,278 @@
+.section-example {
+    text-align: center;
+    padding-left: 20px;
+}
+
+#corners {
+    border-radius: 25px;
+    background: #0288D1;
+    padding: 20px;
+    width: 200px;
+    height: 80px;
+    display: inline-block;
+}
+
+#corners2 {
+    border-radius: 25px;
+    border: 2px solid #0288D1;
+    padding: 20px;
+    width: 200px;
+    height: 80px;
+    display: inline-block;
+}
+
+#corners3 {
+    border-radius: 25px;
+    padding: 20px;
+    background: url('../img/preguica.jpg');
+    background-position: left top;
+    background-repeat: repeat;
+    width: 200px;
+    height: 80px;
+    display: inline-block;
+}
+
+#corners-image {
+    width: 300px;
+    height: 40px;
+    border: 15px solid transparent;
+    padding: 15px;
+    -webkit-border-image: url('../img/img-border1.png') 65 round;
+    -o-border-image: url('../img/img-border1.png') 65 round;
+    border-image: url('../img/img-border1.png') 65 round;
+    display: inline-block;
+}
+
+#corners-image2 {
+    width: 300px;
+    height: 40px;
+    border: 15px solid transparent;
+    padding: 15px;
+    -webkit-border-image: url('../img/img-border1.png') 65 stretch;
+    -o-border-image: url('../img/img-border1.png') 65 stretch;
+    border-image: url('../img/img-border1.png') 65 stretch;
+    display: inline-block;
+}
+
+#corners-image3 {
+    width: 300px;
+    height: 40px;
+    border: 15px solid transparent;
+    padding: 15px;
+    -webkit-border-image: url('../img/img-border2.png') 20% round;
+    -o-border-image: url('../img/img-border2.png') 20% round;
+    border-image: url('../img/img-border2.png') 20% round;
+    display: inline-block;
+}
+
+#corners-image4 {
+    width: 300px;
+    height: 40px;
+    border: 15px solid transparent;
+    padding: 15px;
+    -webkit-border-image: url('../img/img-border2.png') 30% stretch;
+    -o-border-image: url('../img/img-border2.png') 30% stretch;
+    border-image: url('../img/img-border2.png') 30% stretch;
+    display: inline-block;
+}
+
+#background1 {
+    width: 500px;
+    height: 270px;
+    background-image: url(../img/back2.png),url(../img/back3.png), url(../img/back1.jpg);
+    background-position: left bottom, right bottom, left top;
+    background-size: 92px, cover, cover;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    display: inline-block
+}
+#background2 {
+    width: 90%;
+    height: 160px;
+    border: 5px solid black;
+    padding: 10px;
+    background-image: url(../img/back2.png);
+    background-size: 52px;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    display: inline-block
+}
+#background3 {
+    width: 300px;
+    height: 160px;
+    border: 10px dotted black;
+    padding: 35px;
+    background: rgb(107,167, 163);
+    background-clip: padding-box;
+    display: inline-block
+}
+#p1{
+    background-color: rgba(255,0,0,0.3)
+}
+#p2{
+    background-color: rgba(0,255,0,0.3)
+}
+#p3{
+    background-color: rgba(0,0,255,0.3)
+}
+#p4{
+    background-color: hsl(120, 100%, 50%)
+}
+#p5{
+    background-color: hsl(227,68%,45%)
+}
+#p6{
+    background-color: hsl(33,98%,45%)
+}
+#p7{
+    background-color: hsla(120, 100%, 50%,0.3)
+}
+#p8{
+    background-color: hsla(227,68%,45%,0.3)
+}
+#p9{
+    background-color: hsla(33,98%,45%,0.3)
+}
+#p10{
+    background-color: rgb(255,0,0);
+    opacity: 0.3;
+}
+#p11{
+    background-color: rgb(185,70,0);
+    opacity: 0.3;
+}
+#p12{
+    background-color: rgb(55,80,80);
+    opacity: 0.3;
+}
+#grad1 {
+    background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(rgb(51, 177, 251), #00FF7E); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(rgb(51, 177, 251), #00FF7E); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(rgb(51, 177, 251), #00FF7E); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(rgb(51, 177, 251), #00FF7E); /* Standard syntax */
+    height: 100px;
+}
+
+#grad2 {
+    background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, rgb(51, 177, 251), #00FF7E); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, rgb(51, 177, 251), #00FF7E); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, rgb(51, 177, 251), #00FF7E); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, rgb(51, 177, 251), #00FF7E); /* Standard syntax */
+    height: 100px;
+}
+
+#grad3 {
+    background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left top, rgb(51, 177, 251), #00FF7E); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, rgb(51, 177, 251), #00FF7E); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, rgb(51, 177, 251), #00FF7E); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, rgb(51, 177, 251), #00FF7E); /* Standard syntax */
+    height: 100px;
+}
+
+#grad4 {
+    background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(-90deg, rgb(51, 177, 251), #00FF7E); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(-90deg, rgb(51, 177, 251), #00FF7E); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(-90deg, rgb(51, 177, 251), #00FF7E); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(-90deg, rgb(51, 177, 251), #00FF7E); /* Standard syntax */
+    height: 100px;
+}
+#grad5 {
+    background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(rgb(51, 177, 251), #00FF7E, green); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(rgb(51, 177, 251), #00FF7E, green); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(rgb(51, 177, 251), #00FF7E, green); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(rgb(51, 177, 251), #00FF7E, green); /* Standard syntax */
+    height: 100px;
+}
+#grad6 {
+    background: red; /* For browsers that do not support gradients */
+    /* For Safari 5.1 to 6.0 */
+    background: -webkit-linear-gradient(left,red,orange,yellow,green,blue,indigo,violet);
+    /* For Opera 11.1 to 12.0 */
+    background: -o-linear-gradient(left,red,orange,yellow,green,blue,indigo,violet);
+    /* For Fx 3.6 to 15 */
+    background: -moz-linear-gradient(left,red,orange,yellow,green,blue,indigo,violet);
+    /* Standard syntax */
+    background: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+    height: 100px;
+}
+#grad7 {
+    background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left,rgba(255,0,0,0),rgba(255,0,0,1)); /*Safari 5.1-6*/
+    background: -o-linear-gradient(right,rgba(255,0,0,0),rgba(255,0,0,1)); /*Opera 11.1-12*/
+    background: -moz-linear-gradient(right,rgba(255,0,0,0),rgba(255,0,0,1)); /*Fx 3.6-15*/
+    background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1)); /*Standard*/
+    height: 100px;
+}
+#grad8 {
+    background: red; /* For browsers that do not support gradients */
+    background: -webkit-radial-gradient(rgb(51, 177, 251), #00FF7E, green); /* Safari 5.1 to 6.0 */
+    background: -o-radial-gradient(rgb(51, 177, 251), #00FF7E, green); /* For Opera 11.6 to 12.0 */
+    background: -moz-radial-gradient(rgb(51, 177, 251), #00FF7E, green); /* For Firefox 3.6 to 15 */
+    background: radial-gradient(rgb(51, 177, 251), #00FF7E, green); /* Standard syntax */
+    height: 100px;
+}
+#textShadow1{
+    text-shadow: 1px 1px;
+}
+#textShadow2{
+    color:white;
+    text-shadow: 1px 1px 4px #000000;
+}
+#textShadow3{
+    text-shadow: 1px -13px 6px #000000, 3px 10px 5px #232390;
+}
+#textShadow4{
+    color:red;
+    text-shadow: 1px -13px 6px #000000, 3px 10px 5px #232390;
+}
+div.card1{
+    box-shadow: 0 4px 8px rgba(0,0,0, 0.2), 0 6px 20px 0 rgba(0,0,0,0.19)
+}
+div.card1 div.header1 {
+    background-color: #00FF7E;
+    color: white;
+    padding: 10px;
+    font-size: 30px;
+}
+main.container{
+    padding: 5px;
+}
+#text1 {
+    white-space: nowrap;
+    width: 200px;
+    border: 1px solid black;
+    overflow: hidden;
+    text-overflow: clip;
+}
+#text2 {
+    white-space: nowrap;
+    width: 200px;
+    border: 1px solid black;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#text3 {
+    white-space: nowrap;
+    width: 200px;
+    border: 1px solid black;
+    overflow: hidden;
+}
+#text4 {
+    width: 140px;
+    border: 1px solid black;
+    word-break: keep-all;
+}
+#text5 {
+    width: 140px;
+    border: 1px solid black;
+    word-break: break-all;
+}
+#text6 {
+    width: 140px;
+    border: 1px solid black;
+    word-wrap: break-word;
+}
