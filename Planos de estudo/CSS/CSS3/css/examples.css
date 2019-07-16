@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bad+Script');
 .section-example {
     text-align: center;
     padding-left: 20px;
@@ -275,4 +277,17 @@ main.container{
     width: 140px;
     border: 1px solid black;
     word-wrap: break-word;
+}
+#font1{
+    font-family: 'Lobster', cursive;
+}
+#font2{
+    font-family: 'Bad Script', cursive
+}
+@font-face {
+    font-family: "MyFont";
+    src: url(../fonts/ITCKRIST.TTF)
+}
+#font3{
+    font-family: "MyFont"
 }
