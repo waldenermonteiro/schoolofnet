@@ -81,12 +81,13 @@
 #background1 {
     width: 500px;
     height: 270px;
-    background-image: url(../img/back2.png),url(../img/back3.png), url(../img/back1.jpg);
+    background-image: url(../img/back2.png), url(../img/back3.png), url(../img/back1.jpg);
     background-position: left bottom, right bottom, left top;
     background-size: 92px, cover, cover;
     background-repeat: no-repeat, no-repeat, no-repeat;
     display: inline-block
 }
+
 #background2 {
     width: 90%;
     height: 160px;
@@ -98,151 +99,213 @@
     background-origin: content-box;
     display: inline-block
 }
+
 #background3 {
     width: 300px;
     height: 160px;
     border: 10px dotted black;
     padding: 35px;
-    background: rgb(107,167, 163);
+    background: rgb(107, 167, 163);
     background-clip: padding-box;
     display: inline-block
 }
-#p1{
-    background-color: rgba(255,0,0,0.3)
+
+#p1 {
+    background-color: rgba(255, 0, 0, 0.3)
 }
-#p2{
-    background-color: rgba(0,255,0,0.3)
+
+#p2 {
+    background-color: rgba(0, 255, 0, 0.3)
 }
-#p3{
-    background-color: rgba(0,0,255,0.3)
+
+#p3 {
+    background-color: rgba(0, 0, 255, 0.3)
 }
-#p4{
+
+#p4 {
     background-color: hsl(120, 100%, 50%)
 }
-#p5{
-    background-color: hsl(227,68%,45%)
+
+#p5 {
+    background-color: hsl(227, 68%, 45%)
 }
-#p6{
-    background-color: hsl(33,98%,45%)
+
+#p6 {
+    background-color: hsl(33, 98%, 45%)
 }
-#p7{
-    background-color: hsla(120, 100%, 50%,0.3)
+
+#p7 {
+    background-color: hsla(120, 100%, 50%, 0.3)
 }
-#p8{
-    background-color: hsla(227,68%,45%,0.3)
+
+#p8 {
+    background-color: hsla(227, 68%, 45%, 0.3)
 }
-#p9{
-    background-color: hsla(33,98%,45%,0.3)
+
+#p9 {
+    background-color: hsla(33, 98%, 45%, 0.3)
 }
-#p10{
-    background-color: rgb(255,0,0);
+
+#p10 {
+    background-color: rgb(255, 0, 0);
     opacity: 0.3;
 }
-#p11{
-    background-color: rgb(185,70,0);
+
+#p11 {
+    background-color: rgb(185, 70, 0);
     opacity: 0.3;
 }
-#p12{
-    background-color: rgb(55,80,80);
+
+#p12 {
+    background-color: rgb(55, 80, 80);
     opacity: 0.3;
 }
+
 #grad1 {
-    background: red; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(rgb(51, 177, 251), #00FF7E); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(rgb(51, 177, 251), #00FF7E); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(rgb(51, 177, 251), #00FF7E); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(rgb(51, 177, 251), #00FF7E); /* Standard syntax */
+    background: red;
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(rgb(51, 177, 251), #00FF7E);
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(rgb(51, 177, 251), #00FF7E);
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(rgb(51, 177, 251), #00FF7E);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(rgb(51, 177, 251), #00FF7E);
+    /* Standard syntax */
     height: 100px;
 }
 
 #grad2 {
-    background: red; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(left, rgb(51, 177, 251), #00FF7E); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(right, rgb(51, 177, 251), #00FF7E); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(right, rgb(51, 177, 251), #00FF7E); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to right, rgb(51, 177, 251), #00FF7E); /* Standard syntax */
+    background: red;
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, rgb(51, 177, 251), #00FF7E);
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, rgb(51, 177, 251), #00FF7E);
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, rgb(51, 177, 251), #00FF7E);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, rgb(51, 177, 251), #00FF7E);
+    /* Standard syntax */
     height: 100px;
 }
 
 #grad3 {
-    background: red; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(left top, rgb(51, 177, 251), #00FF7E); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(bottom right, rgb(51, 177, 251), #00FF7E); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(bottom right, rgb(51, 177, 251), #00FF7E); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to bottom right, rgb(51, 177, 251), #00FF7E); /* Standard syntax */
+    background: red;
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left top, rgb(51, 177, 251), #00FF7E);
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, rgb(51, 177, 251), #00FF7E);
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, rgb(51, 177, 251), #00FF7E);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, rgb(51, 177, 251), #00FF7E);
+    /* Standard syntax */
     height: 100px;
 }
 
 #grad4 {
-    background: red; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(-90deg, rgb(51, 177, 251), #00FF7E); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(-90deg, rgb(51, 177, 251), #00FF7E); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(-90deg, rgb(51, 177, 251), #00FF7E); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(-90deg, rgb(51, 177, 251), #00FF7E); /* Standard syntax */
-    height: 100px;
-}
-#grad5 {
-    background: red; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(rgb(51, 177, 251), #00FF7E, green); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(rgb(51, 177, 251), #00FF7E, green); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(rgb(51, 177, 251), #00FF7E, green); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(rgb(51, 177, 251), #00FF7E, green); /* Standard syntax */
-    height: 100px;
-}
-#grad6 {
-    background: red; /* For browsers that do not support gradients */
+    background: red;
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(-90deg, rgb(51, 177, 251), #00FF7E);
     /* For Safari 5.1 to 6.0 */
-    background: -webkit-linear-gradient(left,red,orange,yellow,green,blue,indigo,violet);
+    background: -o-linear-gradient(-90deg, rgb(51, 177, 251), #00FF7E);
     /* For Opera 11.1 to 12.0 */
-    background: -o-linear-gradient(left,red,orange,yellow,green,blue,indigo,violet);
-    /* For Fx 3.6 to 15 */
-    background: -moz-linear-gradient(left,red,orange,yellow,green,blue,indigo,violet);
+    background: -moz-linear-gradient(-90deg, rgb(51, 177, 251), #00FF7E);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(-90deg, rgb(51, 177, 251), #00FF7E);
     /* Standard syntax */
-    background: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
     height: 100px;
 }
+
+#grad5 {
+    background: red;
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(rgb(51, 177, 251), #00FF7E, green);
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(rgb(51, 177, 251), #00FF7E, green);
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(rgb(51, 177, 251), #00FF7E, green);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(rgb(51, 177, 251), #00FF7E, green);
+    /* Standard syntax */
+    height: 100px;
+}
+
+#grad6 {
+    background: red;
+    /* For browsers that do not support gradients */
+    /* For Safari 5.1 to 6.0 */
+    background: -webkit-linear-gradient(left, red, orange, yellow, green, blue, indigo, violet);
+    /* For Opera 11.1 to 12.0 */
+    background: -o-linear-gradient(left, red, orange, yellow, green, blue, indigo, violet);
+    /* For Fx 3.6 to 15 */
+    background: -moz-linear-gradient(left, red, orange, yellow, green, blue, indigo, violet);
+    /* Standard syntax */
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    height: 100px;
+}
+
 #grad7 {
-    background: red; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(left,rgba(255,0,0,0),rgba(255,0,0,1)); /*Safari 5.1-6*/
-    background: -o-linear-gradient(right,rgba(255,0,0,0),rgba(255,0,0,1)); /*Opera 11.1-12*/
-    background: -moz-linear-gradient(right,rgba(255,0,0,0),rgba(255,0,0,1)); /*Fx 3.6-15*/
-    background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1)); /*Standard*/
+    background: red;
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1));
+    /*Safari 5.1-6*/
+    background: -o-linear-gradient(right, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1));
+    /*Opera 11.1-12*/
+    background: -moz-linear-gradient(right, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1));
+    /*Fx 3.6-15*/
+    background: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1));
+    /*Standard*/
     height: 100px;
 }
+
 #grad8 {
-    background: red; /* For browsers that do not support gradients */
-    background: -webkit-radial-gradient(rgb(51, 177, 251), #00FF7E, green); /* Safari 5.1 to 6.0 */
-    background: -o-radial-gradient(rgb(51, 177, 251), #00FF7E, green); /* For Opera 11.6 to 12.0 */
-    background: -moz-radial-gradient(rgb(51, 177, 251), #00FF7E, green); /* For Firefox 3.6 to 15 */
-    background: radial-gradient(rgb(51, 177, 251), #00FF7E, green); /* Standard syntax */
+    background: red;
+    /* For browsers that do not support gradients */
+    background: -webkit-radial-gradient(rgb(51, 177, 251), #00FF7E, green);
+    /* Safari 5.1 to 6.0 */
+    background: -o-radial-gradient(rgb(51, 177, 251), #00FF7E, green);
+    /* For Opera 11.6 to 12.0 */
+    background: -moz-radial-gradient(rgb(51, 177, 251), #00FF7E, green);
+    /* For Firefox 3.6 to 15 */
+    background: radial-gradient(rgb(51, 177, 251), #00FF7E, green);
+    /* Standard syntax */
     height: 100px;
 }
-#textShadow1{
+
+#textShadow1 {
     text-shadow: 1px 1px;
 }
-#textShadow2{
-    color:white;
+
+#textShadow2 {
+    color: white;
     text-shadow: 1px 1px 4px #000000;
 }
-#textShadow3{
+
+#textShadow3 {
     text-shadow: 1px -13px 6px #000000, 3px 10px 5px #232390;
 }
-#textShadow4{
-    color:red;
+
+#textShadow4 {
+    color: red;
     text-shadow: 1px -13px 6px #000000, 3px 10px 5px #232390;
 }
-div.card1{
-    box-shadow: 0 4px 8px rgba(0,0,0, 0.2), 0 6px 20px 0 rgba(0,0,0,0.19)
+
+div.card1 {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 }
+
 div.card1 div.header1 {
     background-color: #00FF7E;
     color: white;
     padding: 10px;
     font-size: 30px;
 }
-main.container{
+
+main.container {
     padding: 5px;
 }
+
 #text1 {
     white-space: nowrap;
     width: 200px;
@@ -250,6 +313,7 @@ main.container{
     overflow: hidden;
     text-overflow: clip;
 }
+
 #text2 {
     white-space: nowrap;
     width: 200px;
@@ -257,37 +321,359 @@ main.container{
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
 #text3 {
     white-space: nowrap;
     width: 200px;
     border: 1px solid black;
     overflow: hidden;
 }
+
 #text4 {
     width: 140px;
     border: 1px solid black;
     word-break: keep-all;
 }
+
 #text5 {
     width: 140px;
     border: 1px solid black;
     word-break: break-all;
 }
+
 #text6 {
     width: 140px;
     border: 1px solid black;
     word-wrap: break-word;
 }
-#font1{
+
+#font1 {
     font-family: 'Lobster', cursive;
 }
-#font2{
+
+#font2 {
     font-family: 'Bad Script', cursive
 }
+
 @font-face {
     font-family: "MyFont";
     src: url(../fonts/ITCKRIST.TTF)
 }
-#font3{
+
+#font3 {
     font-family: "MyFont"
+}
+
+#element {
+    width: 200px;
+    height: 80px;
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
+    background-color: #1b6d85;
+    color: white;
+}
+
+.translate {
+    -ms-transform: translate(50px, 100px);
+    /* IE 9 */
+    -webkit-transform: translate(50px, 100px);
+    /* Safari */
+    transform: translate(50px, 100px);
+}
+
+.rotate {
+    -ms-transform: rotate(20deg);
+    /* IE 9 */
+    -webkit-transform: rotate(20deg);
+    /* Safari */
+    transform: rotate(20deg);
+}
+
+.scale {
+    -ms-transform: scale(2, 3);
+    /* IE 9 */
+    -webkit-transform: scale(2, 3);
+    /* Safari */
+    transform: scale(2, 3);
+}
+
+.skewX {
+    -ms-transform: skewX(20deg);
+    /* IE 9 */
+    -webkit-transform: skewX(20deg);
+    /* Safari */
+    transform: skewX(20deg);
+}
+
+.skewY {
+    -ms-transform: skewY(20deg);
+    /* IE 9 */
+    -webkit-transform: skewY(20deg);
+    /* Safari */
+    transform: skewY(20deg);
+}
+
+.skew {
+    -ms-transform: skew(20deg, 10deg);
+    /* IE 9 */
+    -webkit-transform: skew(20deg, 10deg);
+    /* Safari */
+    transform: skew(20deg, 10deg);
+}
+
+/* matrix(scaleX(),skewY(),skewX(),scaleY(),translateX(),translateY()): */
+
+.matrix {
+    -ms-transform: matrix(1, -0.3, 0, 1, 0, 0);
+    /* IE 9 */
+    -webkit-transform: matrix(1, -0.3, 0, 1, 0, 0);
+    /* Safari */
+    transform: matrix(1, -0.3, 0, 1, 0, 0);
+}
+
+/* 3D */
+
+.rotateX {
+    -webkit-transform: rotateX(150deg);
+    /* Safari */
+    transform: rotateX(10deg);
+}
+
+.rotateY {
+    -webkit-transform: rotateY(130deg);
+    /* Safari */
+    transform: rotateY(130deg);
+}
+
+.rotateZ {
+    -webkit-transform: rotateZ(90deg);
+    /* Safari */
+    transform: rotateZ(90deg);
+}
+
+/* perspective */
+
+.p1 {
+    position: relative;
+    height: 150px;
+    width: 242px;
+    margin: 50px;
+    padding: 10px;
+    border: 1px solid black;
+    -webkit-perspective: 150px;
+    /* Chrome, Safari, Opera  */
+    perspective: 150px;
+}
+
+.p2 {
+    padding: 50px;
+    position: absolute;
+    border: 1px solid black;
+    background-color: red;
+    -webkit-transform: rotateX(45deg);
+    /* Chrome, Safari, Opera  */
+    transform: rotateX(45deg);
+}
+
+/* transform-style: preserve-3d */
+
+#div1 {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    margin: 100px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+#div2 {
+    padding: 50px;
+    position: absolute;
+    border: 1px solid black;
+    background-color: red;
+    -webkit-transform: rotateY(60deg);
+    /* Chrome, Safari, Opera */
+    -webkit-transform-style: preserve-3d;
+    /* Chrome, Safari, Opera */
+    transform: rotateY(60deg);
+    transform-style: preserve-3d;
+}
+
+#div3 {
+    padding: 40px;
+    position: absolute;
+    border: 1px solid black;
+    background-color: yellow;
+    -webkit-transform: rotateY(-60deg);
+    /* Chrome, Safari, Opera */
+    transform: rotateY(-60deg);
+}
+
+.element1 {
+    width: 200px;
+    height: 30px;
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
+    background-color: #3d647f;
+    color: white;
+    -webkit-transition: background-color 2s, width 3s;
+    transition: background-color 2s, width 3s;
+}
+
+.element2 {
+    width: 200px;
+    height: 30px;
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
+    background-color: #3d647f;
+    color: white;
+    -webkit-transition: width 2s, height 2s, -webkit-transform 2s;
+    transition: width 2s, height 2s, transform 2s;
+}
+
+.transitions1 {
+    -webkit-transition-timing-function: ease;
+    transition-timing-function: ease;
+}
+
+.transitions2 {
+    -webkit-transition-timing-function: linear;
+    transition-timing-function: linear;
+}
+
+.transitions3 {
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+}
+
+.transitions4 {
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.transitions5 {
+    -webkit-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+}
+
+.transitions6 {
+    -webkit-transition-timing-function: cubic-bezier(0.4, 2, 0.2, 1);
+    transition-timing-function: cubic-bezier(0.4, 2, 0.2, 1);
+}
+
+.transitions7 {
+    -webkit-transition-delay: 2s;
+    transition-delay: 2s;
+}
+
+.element1:hover {
+    width: 500px;
+    background-color: #0288D1
+}
+
+.element2:hover {
+    width: 300px;
+    height: 300px;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.player {
+    position: relative;
+    -webkit-animation-name: animation2;
+    animation-name: animation2;
+    -webkit-animation-duration: 4s;
+    animation-duration: 4s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+.player-body {
+    width: 0px;
+    height: 0px;
+    border-right: 61px solid transparent;
+    border-top: 92px solid #39A045;
+    border-left: 61px solid #39A045;
+    border-bottom: 27px solid #39A045;
+    border-top-right-radius: 150px;
+    border-top-left-radius: 139px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.player-eye {
+    position: absolute;
+    left: 72px;
+    top: 27px;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+    background-color: white;
+    width: 35px;
+    height: 23px;
+    -webkit-animation: blink 10s linear 1s infinite;
+    animation: blink 3s linear 1s infinite;
+}
+
+@-webkit-keyframes animation1 {
+    from {
+        -ms-transform: translate(0,0); /* IE 9 */
+        -webkit-transform: translate(0,0); /* Safari */
+        transform: translate(0,0);
+    }
+    to {
+        -ms-transform: translate(500px,0); /* IE 9 */
+        -webkit-transform: translate(500px,0); /* Safari */
+        transform: translate(500px,0);
+    }
+}
+
+@keyframes animation1 {
+    from{
+        transform: translate(0,0);
+    }
+    to{
+        transform: translate(500px,0);
+    }
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes animation2 {
+    0%{
+        -ms-transform: translate(0,0); /* IE 9 */
+        -webkit-transform: translate(0,0); /* Safari */
+        transform: translate(0,0);
+    }
+    25%{
+        -ms-transform: translate(100px,50px); /* IE 9 */
+        -webkit-transform: translate(100px,50px); /* Safari */
+        transform: translate(100px,50px);
+    }
+    50%{
+        -ms-transform: translate(200px,0); /* IE 9 */
+        -webkit-transform: translate(200px,0); /* Safari */
+        transform: translate(200px,0);
+    }
+    100%{
+        -ms-transform: translate(500px,-50px); /* IE 9 */
+        -webkit-transform: translate(500px,-50px); /* Safari */
+        transform: translate(500px,-50px);
+    }
+}
+
+
+@keyframes animation2 {
+    0%{transform: translate(0,0);}
+    25%{transform: translate(100px,50px);}
+    50%{transform: translate(200px,0);}
+    100%{transform: translate(500px,-50px);}
+}
+
+@keyframes blink {
+    0%{background-color: white}
+    98%{background-color: white}
+    100%{background-color: #39A045}
 }
