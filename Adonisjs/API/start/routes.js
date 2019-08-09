@@ -6,13 +6,16 @@ const Route = use('Route')
 
 Route.on('/').render('welcome')
 // Route.resource('posts', 'PostController').apiOnly()
+Route.group('v1', function () {
+    Route.get('/posts', 'PostController.list').middleware('auth')
+    Route.get('/posts/:id', 'PostController.getBydId')
+    Route.post('/posts', 'PostController.create')
+    Route.put('/posts/:id', 'PostController.update')
+    Route.delete('/posts/:id', 'PostController.remove')
+}).prefix('api/v1')
 
-Route.get('/posts', 'PostController.list')
-Route.get('/posts/:id', 'PostController.getBydId')
-Route.post('/posts', 'PostController.create')
-Route.put('/posts/:id', 'PostController.update')
-Route.delete('/posts/:id', 'PostController.remove')
-
-Route.post('/auth', 'UserController.auth')
+Route.get('/secure', 'UserController.index').middleware('auth')
+Route.get('/auth/:id', 'UserController.auth')
+Route.get('/users', 'UserController.list')
 Route.post('/users', 'UserController.create')
 
