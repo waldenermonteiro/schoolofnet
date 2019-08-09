@@ -1,0 +1,4 @@
+- Conversa com o mecanismo de busca.
+- Presença essencial no seu site.
+- Controle de acesso.
+- Controle de indexação.

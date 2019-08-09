@@ -1,0 +1,4 @@
+- Estilo de formatação
+- Facilita a exibição do conteúdo
+- É interessante ao usuário
+- Não foca em perfomance SEO

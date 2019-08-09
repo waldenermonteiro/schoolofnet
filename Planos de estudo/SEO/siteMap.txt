@@ -1,0 +1,3 @@
+- Ajudar o usuário
+- Estrutura do site
+- Lista de links

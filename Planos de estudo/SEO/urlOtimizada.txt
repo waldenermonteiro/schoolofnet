@@ -1,0 +1,5 @@
+- Não conter acentuação gráfica ou underline.
+- Seguir o idioma padrão
+- Segmentar padrões de url
+- Não otimizado : https://www.schoolofnet.com/courses/iniciando-android
+- Otimizado : https://www.schoolofnet.com/curso-iniciando-android

@@ -1,0 +1,3 @@
+- Google Trands (palavras chaves)
+- Google WebMasters
+- PageSpeed Insights (Análise geral do seu site)
