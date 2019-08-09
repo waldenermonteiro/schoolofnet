@@ -11,5 +11,8 @@ Route.get('/posts', 'PostController.list')
 Route.get('/posts/:id', 'PostController.getBydId')
 Route.post('/posts', 'PostController.create')
 Route.put('/posts/:id', 'PostController.update')
+Route.delete('/posts/:id', 'PostController.remove')
 
-Route.get('/json/:name', 'JsonController.index')
+Route.post('/auth', 'UserController.auth')
+Route.post('/users', 'UserController.create')
+

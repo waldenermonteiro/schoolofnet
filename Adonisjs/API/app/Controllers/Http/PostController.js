@@ -32,5 +32,14 @@ class PostController {
 
         return post
     }
+    async remove({ params, request, response }) {
+        const post = await Post.findBy('id', params.id)
+        if (!post) {
+            await response.badRequest('Lalala lelele')
+        }else{
+            await post.delete()
+        }
+  
+    }
 }
 module.exports = PostController
