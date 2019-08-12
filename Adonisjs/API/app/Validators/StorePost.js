@@ -12,21 +12,20 @@
 // Validator.extend('uniqueUpdate', existsFn)
 
 class StorePost {
-  static get name(){
+  get name(){
     return 'Post'
   }
-  static get inputs(){
+  get inputs(){
     return ['title', 'text']
   }
-  static get rules () {
-    console.log(this.ctx)
-    const userId = this.ctx.params.id
+  rules (postId) {
+    postId = !postId ? 0 : postId
     return {
-      title: `required|unique:posts,title,id,${userId}`,
+      title: `required|unique:posts,title,id,${postId}`,
       text: 'required'
     }
   }
-  static get messages () {
+  get messages () {
     return {
       'title.required': 'O campo título é obrigatório',
       'title.unique': 'Já possui um post com esse título, por favor, escolha outro',

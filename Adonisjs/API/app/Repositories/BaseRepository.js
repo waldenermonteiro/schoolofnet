@@ -3,7 +3,7 @@ const { validateAll } = use('Validator')
 class BaseRepository {
     constructor(Model, Validator) {
         this.Model = Model
-        this.Validator = Validator
+        this.Validator = new Validator()
     }
     async list({ request, response }) {
         const items = await this.Model.all()
@@ -23,7 +23,7 @@ class BaseRepository {
     }
     async create({ request, response }) {
         const data = request.only(this.Validator.inputs)
-        const validation = await validateAll(data, this.Validator.rules, this.Validator.messages)
+        const validation = await validateAll(data, this.Validator.rules(), this.Validator.messages)
         if (this.verifyErrorsInRequest(validation, response) === false) {
             const item = await this.Model.create(data)
             return response.ok({
@@ -34,7 +34,7 @@ class BaseRepository {
     }
     async update({ request, response, params }) {
         const data = request.only(this.Validator.inputs)
-        const validation = await validateAll(data, this.Validator.rules, this.Validator.messages)
+        const validation = await validateAll(data, this.Validator.rules(params.id), this.Validator.messages)
         const item = await this.Model.findBy('id', params.id)
         if (this.verifyIfExistItem(item, response) === false && this.verifyErrorsInRequest(validation, response) === false) {
             await item.merge(data)
