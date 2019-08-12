@@ -1,48 +1,70 @@
 'use strict'
-
+const { validateAll } = use('Validator')
 class BaseRepository {
-    constructor (Model) {
+    constructor(Model, Validator) {
         this.Model = Model
-      }
+        this.Validator = Validator
+    }
     async list({ request, response }) {
         const items = await this.Model.all()
-
-        response.ok({
+        return response.ok({
             status: 200,
             data: items
         })
     }
     async getBydId({ request, response, params }) {
-        const post = await this.Model.findBy('id', params.id)
-
-        return post
-    }
-
-    async create({ request, response }) {
-        const data = request.only(['title', 'text'])
-        const post = await this.Model.create(data)
-
-        return post
-    }
-    async update({ params, request, response }) {
-        const data = request.only([
-            'title',
-            'text'
-        ])
-        const post = await Post.findOrFail(params.id)
-        await post.merge(data)
-        await post.save()
-
-        return post
-    }
-    async remove({ params, request, response }) {
-        const post = await Post.findBy('id', params.id)
-        if (!post) {
-            await response.badRequest('Lalala lelele')
-        }else{
-            await post.delete()
+        const item = await this.Model.findBy('id', params.id)
+        if (this.verifyIfExistItem(item, response) === false) {
+            return response.ok({
+                status: 200,
+                data: item
+            })
         }
-  
+    }
+    async create({ request, response }) {
+        const data = request.only(this.Validator.inputs)
+        const validation = await validateAll(data, this.Validator.rules, this.Validator.messages)
+        if (this.verifyErrorsInRequest(validation, response) === false) {
+            const item = await this.Model.create(data)
+            return response.ok({
+                status: 200,
+                data: item
+            })
+        }
+    }
+    async update({ request, response, params }) {
+        const data = request.only(this.Validator.inputs)
+        const validation = await validateAll(data, this.Validator.rules, this.Validator.messages)
+        const item = await this.Model.findBy('id', params.id)
+        if (this.verifyIfExistItem(item, response) === false && this.verifyErrorsInRequest(validation, response) === false) {
+            await item.merge(data)
+            await item.save()
+            return response.ok({
+                status: 200,
+                data: item
+            })
+        }
+    }
+    async remove({ request, response, params }) {
+        const item = await this.Model.findBy('id', params.id)
+        if (this.verifyIfExistItem(item, response) === false) {
+            return await item.delete()
+        }
+    }
+    verifyIfExistItem(item, response) {
+        if (!item) {
+            return response.badRequest({ status: 400, errors: [{ message: `${this.Validator.name} não encontrado(a)` }] })
+        }
+        return false
+    }
+    verifyErrorsInRequest(validation, response) {
+        if (validation.fails()) {
+            return response.badRequest({
+                status: 400,
+                errors: validation.messages()
+            })
+        }
+        return false
     }
 }
 module.exports = BaseRepository
