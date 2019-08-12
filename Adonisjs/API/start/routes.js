@@ -7,7 +7,7 @@ const Route = use('Route')
 Route.on('/').render('welcome')
 // Route.resource('posts', 'PostController').apiOnly()
 Route.group('v1', function () {
-    Route.get('/posts', 'PostController.list').middleware('auth')
+    Route.get('/posts', 'PostController.list')
     Route.get('/posts/:id', 'PostController.getBydId')
     Route.post('/posts', 'PostController.create')
     Route.put('/posts/:id', 'PostController.update')

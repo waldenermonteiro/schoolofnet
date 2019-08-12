@@ -19,7 +19,7 @@ class StorePost {
     return ['title', 'text']
   }
   rules (postId) {
-    postId = !postId ? 0 : postId
+    postId = postId || 0
     return {
       title: `required|unique:posts,title,id,${postId}`,
       text: 'required'
