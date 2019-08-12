@@ -10,7 +10,7 @@ Route.group('v1', function () {
     Route.get('/posts', 'PostController.list').middleware('auth')
     Route.get('/posts/:id', 'PostController.getBydId')
     Route.post('/posts', 'PostController.create')
-    Route.put('/posts/:id', 'PostController.update')
+    Route.put('/posts/:id', 'PostController.update').validator('StorePost')
     Route.delete('/posts/:id', 'PostController.remove')
 }).prefix('api/v1')
 
