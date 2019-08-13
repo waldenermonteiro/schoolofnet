@@ -6,25 +6,6 @@ class UserController {
         const token = await auth.generate(user)
         return token
     }
-    /**
-* @swagger
-* /users:
-*   get:
-*     tags:
-*       - Test
-*     summary: Sample API
-*     parameters:
-*       - name: name
-*         description: Name of the user
-*         in: query
-*         required: false
-*         type: string
-*     responses:
-*       200:
-*         description: Send hello message
-*         example:
-*           message: Hello Guess
-*/
     async list({ request, response }) {
         const users = await User.all()
         response.ok({

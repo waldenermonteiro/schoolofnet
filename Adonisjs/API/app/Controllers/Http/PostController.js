@@ -1,5 +1,4 @@
 'use strict'
-
 const Post = use('App/Models/Post')
 const StorePost = use('App/Validators/StorePost')
 const BaseController = use('App/Controllers/Http/BaseController')
