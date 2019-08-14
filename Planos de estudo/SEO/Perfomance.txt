@@ -1,0 +1,4 @@
+- Manter scripts no fim da página
+- Minificar Js/Html
+- Minificar Css/Imagens
+- Comprimir
