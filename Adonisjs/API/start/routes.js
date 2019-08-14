@@ -15,6 +15,7 @@ Route.group('v1', function () {
 }).prefix('api/v1')
 
 Route.get('/secure', 'UserController.index').middleware('auth')
+Route.post('/login', 'UserController.login')
 Route.get('/auth/:id', 'UserController.auth')
 Route.get('/users', 'UserController.list')
 Route.post('/users', 'UserController.create')

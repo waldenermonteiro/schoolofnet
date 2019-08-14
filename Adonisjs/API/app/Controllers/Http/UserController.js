@@ -1,27 +1,20 @@
 'use strict'
 const User = use('App/Models/User')
-class UserController {
+const StoreUser = use('App/Validators/storeUser')
+const BaseController = use('App/Controllers/Http/BaseController')
+const UserRepository = use('App/Repositories/UserRepository')
+class UserController extends BaseController {
+    constructor() {
+        super(User, StoreUser)
+        this.UserRepository = new UserRepository(User, StoreUser)
+    }
+    async login({auth, request, response, params }) {
+        return await this.UserRepository.login({ auth, request, response, params })
+    }
     async auth({ auth, request, response, params }) {
         const user = await User.find(params.id)
         const token = await auth.generate(user)
         return token
-    }
-    async list({ request, response }) {
-        const users = await User.all()
-        response.ok({
-            status: 200,
-            data: users
-        })
-    }
-    async create({ auth, request, response }) {
-        const data = request.only(['username', 'email', 'password'])
-        const user = await User.create(data)
-        const token = await auth.generate(user)
-
-        return { user, token }
-    }
-    async index({ auth, request, response, params }) {
-        response.json({ msg: "Hello from auth area" })
     }
 }
 
