@@ -36,7 +36,7 @@ class UserRepository extends BaseRepository {
         return params.response.badRequest({ status: 400, errors: [{ message: `Email ou senha inválidos)` }] })
     }
     async userLogger(params) {
-        let token = await params.auth.generate(params.user)
+        let token = await params.auth.generate(params.user, true)
         return params.response.ok({
             status: 200,
             data: { user: params.user, token }
