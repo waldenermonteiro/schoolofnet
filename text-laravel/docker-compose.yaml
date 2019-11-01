@@ -1,0 +1,7 @@
+version: '3'
+
+services:
+  laravel-app:
+    image: waldenermonteiro/laravel-image-test:latest
+    ports:
+      - "8080:80"
