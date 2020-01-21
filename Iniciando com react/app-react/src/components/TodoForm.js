@@ -1,18 +1,23 @@
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 
-function TodoForm({insertToData}) {
-    const [todo, setTodo] = useState();
+function TodoForm(props) {
+    const [todo, setTodo] = useState('');
     const onAdd = (event) => {
         event.preventDefault()
-        insertToData(todo)
+        props.pushToItems(todo)
+        setTodo('')
     }
     const handleChange = (event) => {
         setTodo(event.target.value)
-      }
+    }
     return (
         <div>
-            <input type="text" onChange={handleChange} name="name" id="name" placeholder="Name" />
-            <button onClick={onAdd}>Click me</button>
+            <div className="form-group">
+                <input className="form-control" type="text" value={todo} onChange={handleChange} name="name" id="name" placeholder="Name" />
+            </div>
+            <div className="form-group">
+                <button className="btn btn-primary" onClick={onAdd}>Add</button>
+            </div>
         </div>
     )
 }

@@ -1,22 +1,16 @@
-import React, { useState } from 'react';
-import TodoForm from './TodoForm'
-function ToList() {
-  const [data, setData] = useState([]);
+import React from 'react';
+import TodoListItem from './TodoListItem'
+function TodoList(props) {
 
-  const insertToData = (paramTodo) => {
-    setData([...data, paramTodo])
-    console.log(data)
-  }
   return (
     <div>
-     <TodoForm insertToData={insertToData}></TodoForm>
-      <ul>
-        {data.map((item, index) => (
-          <li key={index}>{item}</li>
+      <ul className="list-group">
+        {props.items.map((item, index) => (
+          <TodoListItem key={index} index={index} item={item} removeFromItems={props.removeFromItems} />
         ))}
       </ul>
     </div>
   );
 }
 
-export default ToList
+export default TodoList
