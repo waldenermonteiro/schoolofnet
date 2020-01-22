@@ -1,4 +1,5 @@
-import React, { useState ,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios'
 import TodoForm from './../components/TodoForm'
 import TodoList from './../components/TodoList'
 import ContainerApp from './../components/Container'
@@ -8,11 +9,12 @@ function TodoListApp() {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-            fetch('https://jsonplaceholder.typicode.com/todos')
-            .then(result => result.json())   
-            .then(result => console.log(result))   
-      });
-
+        getItems()
+    })
+    const getItems = async () => {
+       const { data } = await axios.get('https://jsonplaceholder.typicode.com/todos')
+       console.log(data)
+    }
     const pushToItems = (todoItem) => {
         setData([...data, todoItem])
     }
