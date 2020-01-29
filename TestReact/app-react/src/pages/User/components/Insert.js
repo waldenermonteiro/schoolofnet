@@ -21,7 +21,7 @@ function Insert(props) {
     const getById = async () => {
         try {
             const response = await UserService.show(idRoute)
-            return response
+            return response.data
         } catch (error) {
             return error
         }

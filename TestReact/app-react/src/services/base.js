@@ -9,7 +9,7 @@ export default class Base {
   list = async () => {
     try {
       const response = await this.http.get(this.api)
-      return response
+      return response.data
     } catch (error) {
       throw this.responseService(error, 'list')
     }
@@ -17,6 +17,7 @@ export default class Base {
   show = async ($id) => {
     try {
       const response = await this.http.get(`${this.api}/${$id}`)
+      console.log(response)
       return response.data
     } catch (error) {
       throw this.responseService(error, 'get', 'item')
