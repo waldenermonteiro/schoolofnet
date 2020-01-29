@@ -24,7 +24,7 @@ const setMultipleNotifyDanger = (messages) => {
     this.setUniqueNotifyDanger(message.errorMessage)
   })
 }
-const verificationAlert = ({ id, message }, callback) => {
+const verificationAlert = ({ id, message, nameModule }, callback) => {
   swal({
     title: "Are you sure?",
     text: message,
@@ -35,14 +35,14 @@ const verificationAlert = ({ id, message }, callback) => {
     .then((willDelete) => {
       if (willDelete) {
         callback(id).then(() => {
-          swal("Poof! Your imaginary file has been deleted!", {
+          swal(`Poof! Your imaginary ${nameModule} has been deleted!`, {
             icon: "success",
           });
         }).catch((err) => {
           alertDanger(err)
         });
       } else {
-        swal("Your imaginary file is safe!");
+        swal(`Your imaginary ${nameModule} is safe!`);
       }
     });
 }

@@ -7,24 +7,26 @@ import UserService from '../services/UserService'
 function Home() {
     const [data, setData] = useState([])
     useEffect(() => {
-        getUsers()
+       getAll()
     }, [])
+    const getAll = async() => {
+        try {
+            const response = await UserService.list()
+            setData(response.data)
+        } catch (error) {
+            alertDanger(error)
+        }
+    }
     const deleteItem = (id, name) => {
-        verificationAlert({ id, message: `Are you sure you want to delete the ${name} user?` }, deleteItemCallback)
+        verificationAlert({ id, message: `Are you sure you want to delete the ${name} user?`, nameModule: 'user' }, deleteItemCallback)
     }
-    const deleteItemCallback =  async (id) => {
-        await UserService.remove(id).then((result) => {
-            getUsers()
-        }).catch((err) => {
-            throw err
-        });
-    }
-    const getUsers = () => {
-        UserService.list().then((result) => {
-            setData(result.data)
-        }).catch((err) => {
-            alertDanger(err)
-        });
+    const deleteItemCallback = async (id) => {
+        try {
+            await UserService.remove(id)
+            await getAll()
+        } catch (error) {
+            throw error
+        }
     }
     return (
         <div>
