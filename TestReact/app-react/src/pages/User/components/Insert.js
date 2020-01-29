@@ -1,23 +1,36 @@
 import React, { useState, useEffect } from 'react';
 import { Form, Button, Label, Input, FormGroup } from 'reactstrap'
 import { Link } from 'react-router-dom'
-import { alertSuccess } from '../utils/messages'
-function Insert(props) {
-    const id = props.match.params.id || null
-    const dataInitial = localStorage.getItem("data") ? JSON.parse(localStorage.getItem('data')) : []
+import { alertSuccess, alertDanger } from '../../../utils/alerts'
+import UserService from '../services/UserService'
 
+function Insert(props) {
+
+
+    const idRoute = props.match.params.id || null
     const [name, setName] = useState('')
     const [lastName, setLastName] = useState('')
     const [date, setDate] = useState('')
     const [check, setCheck] = useState(false)
-    const [data, setData] = useState(dataInitial)
-    useEffect(() => {
-        if (id) {
-            const filtered = data.filter(item => item.id === id)[0]
+    const [data, setData] = useState([])
+    useEffect( async () => {
+        await get()
+        if (idRoute) {
+            const filtered = filteredInformation()
             setInformations(filtered)
         }
-    }, [data, id])
-
+    }, [])
+        const get = async () => {
+        await UserService.list().then((result) => {
+            setData(result.data)
+        }).catch((err) => {
+            alertDanger(err)
+        });
+    }
+    const filteredInformation = async () => {
+        console.log(data)
+        return data.filter(item => item.id === idRoute)[0]
+    }
     const setInformations = ({ name, lastName, date, check }) => {
         setName(name)
         setLastName(lastName)
@@ -46,24 +59,32 @@ function Insert(props) {
         setCheck(value)
     }
     const handleStore = async () => {
-        if (id) {
-            const filteredItem = data.filter(item => item.id === id)[0]
-            const index = data.indexOf(filteredItem)
-            let arr = data
-            arr.splice(index, 1, { id, name, lastName, date, check })
-            await setData(arr)
-            localStorage.setItem('data', JSON.stringify(data))
+        if (idRoute) {
+            const id = idRoute
+            await createOrUpdate({ id, name, lastName, date, check })
             alertSuccess('User successfully modified')
             props.history.push('/users')
 
         } else {
-            const arr = data
             const id = _generateRandomId()
-            arr.push({ id, name, lastName, date, check })
-            await setData(arr)
-            localStorage.setItem('data', JSON.stringify(data))
-            alertSuccess('User successfully registered')
+            await createOrUpdate({ id, name, lastName, date, check })
             props.history.push('/users')
+        }
+
+    }
+    const createOrUpdate = async (user) => {
+        if (idRoute) {
+            await UserService.update(user).then((result) => {
+                alertSuccess('User successfully modified')
+            }).catch((err) => {
+                alertDanger(err)
+            });
+        } else {
+            await UserService.create(user).then((result) => {
+                alertSuccess('User successfully modified')
+            }).catch((err) => {
+                alertDanger(err)
+            });
         }
 
     }

@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { Container, Row, Col } from 'reactstrap'
-import Insert from './components/Insert'
-import Home from './components/Home'
+import Insert from './pages/User/components/Insert'
+import Home from './pages/User/components/Home'
 import Header from './components/Header'
 import Footer from './components/Footer'
 function App() {
