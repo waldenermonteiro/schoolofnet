@@ -1,0 +1,27 @@
+.container {
+    width: 250px;
+    height: 300px;
+}
+.item {
+   border: 1px solid red; 
+}
+.align-self-start {
+    align-self: flex-end; /* Ele substitui o align do pai */
+}
+.fx{
+    flex: 0;
+}
+.flex {
+    display: flex; /* Permite os filhos serem flexíveis, utilizarem as propriedades do flexbox */
+    flex-direction: row;  /* A direção dos filhos, por padrão vem row */
+    flex-direction: row-reverse;  /* row reverse interte as linhas */
+    flex-direction: column-reverse;  /* column-reverse define os filhos em formato de coluna invertida, pegando 100% do width do pai */
+    flex-direction: column;  /* column define os filhos em formato de coluna, pegando 100% do width do pai */
+    justify-content: center; /* movimenta os filhos a parti do container, por exemplo, centralizado */
+    flex-wrap: wrap-reverse;  /* define se os filhos irão seguir as regras de tamanho do pai, invertido  */
+    flex-wrap: wrap;  /* define se os filhos irão seguir as regras de tamanho do pai, por padrão vem wrap e faz a quebra de linhas */
+    /* align-items: trabalha sempre no eixo do container(flex-direction), maior liberdade */
+    align-items: center;
+    /* align-content: trabalha sempre no eixo vertical, sem muita liberdade */
+    
+}
