@@ -1,0 +1,14 @@
+$color: blue;
+header {
+  ul {
+    li {
+      display: inline-block;
+      a {
+        text-decoration: none;
+        &:hover {
+          color: $color;
+        }
+      }
+    }
+  }
+}
