@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import InitForm from "./components/InitForm";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+  onClick = (button) => {
+    button.preventDefault();
+    console.log("Clicked in redux form");
+  };
+  onChangeName = ({ target }) => {
+    console.log(target.value);
+  };
+  render() {
+    return (
+      <div className="col">
+        <div className="card">
+          <div className="card-header">Redux Form</div>
+          <div className="card-body">
+            <div className="card-title">Myform</div>
+            <InitForm onClick={this.onClick} onChangeName={this.onChangeName}></InitForm>
+          </div>
+          <div className="card-footer">
+            <p>Card footer</p>
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
-
-export default App;
