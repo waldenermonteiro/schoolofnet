@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+a {
+  color: inherit; /*  Herdar do elemento anterior */
+  text-decoration: none;
+}
+menu,
+menu ul,
+menu li {
+  display: block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+h1,
+h3,
+p {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
