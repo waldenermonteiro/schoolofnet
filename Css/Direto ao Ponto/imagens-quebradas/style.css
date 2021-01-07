@@ -1,0 +1,8 @@
+img::before {
+  /* content: 'Falha ao carregar a imagem'; */
+  content: "Falha ao carregar a imagem. Url: " attr(src);
+  display: block;
+  margin: 0 0 1em 0;
+}
+img::after {
+}
