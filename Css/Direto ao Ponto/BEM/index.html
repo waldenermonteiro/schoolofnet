@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .list {
+        width: 100%;
+        border: 1px solid black;
+      }
+      .list__item {
+        background-color: #f1f1f1;
+      }
+      .list__text {
+        color: gray;
+      }
+      .list__text--color-red {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Modelo antigo -->
+    <ul class="list">
+      <li class="list-item"></li>
+      <li class="list-item"></li>
+    </ul>
+    <!-- Modelo BEM -->
+    <ul class="list">
+      <li class="list__item"><p class="list__text">texto 1</p></li>
+      <li class="list__item">
+        <p class="list__text--color-red">texto 2</p>
+        <p></p>
+      </li>
+    </ul>
+  </body>
+</html>
