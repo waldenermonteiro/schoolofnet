@@ -8,7 +8,7 @@ function HomeScreen({ navigation }) {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text>Home Screen</Text>
-      <TextInput style={Input.Inputs.basicInput} value={textValue} onChangeText={(textValue) => onChangeText(textValue)} />
+      <TextInput style={Input.Inputs.basicInput} value={textValue} onChangeText={(value) => onChangeText(value)} />
       <Button title="Go to details screen" onPress={() => navigation.navigate('Details', { textValue })} />
     </View>
   );
