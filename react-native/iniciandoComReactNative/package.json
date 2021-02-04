@@ -25,5 +25,9 @@
   },
   "jest": {
     "preset": "react-native"
+  },
+  "prettier":{
+    "printWidth": 180,
+    "singleQuote": true
   }
 }
